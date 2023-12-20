@@ -40,6 +40,7 @@ jobs:
       working-directory: locales
       shell: bash
       run: |
+        echo locales/*/
         echo locales/*/ | jq -nRc '[input]' >> $GITHUB_OUTPUT
 
 
