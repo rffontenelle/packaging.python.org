@@ -38,9 +38,8 @@ jobs:
     - name: List languages
       id: languages
       working-directory: locales
-      shell: bash
       run: |
-        echo locales/*/
+        shopt -s extglob
         echo locales/*/ | jq -nRc '[input]' >> $GITHUB_OUTPUT
 
 
