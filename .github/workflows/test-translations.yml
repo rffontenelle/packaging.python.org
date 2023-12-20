@@ -38,7 +38,7 @@ jobs:
     - name: List languages
       id: languages
       run: |
-        echo locales/*/ | jq -nRc '[input]' >> $GITHUB_OUTPUT
+        echo locales/*/ | tr ' ' ',' | jq -nRc '[input]' >> $GITHUB_OUTPUT
 
 
   test-translation:
