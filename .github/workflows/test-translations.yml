@@ -73,6 +73,9 @@ jobs:
       id: build
       run: nox -s build -- -q -D language=${{ matrix.language }}
 
+    - name: Show ${{ steps.build.outcome }}
+      run: echo ${{ steps.build.outcome }}
+
     - name: Lint translation file
       if: contains(fromJSON('["success", "failure"]'), steps.build.outcome)
       run: sphinx-lint locales/${{ matrix.language }}/LC_MESSAGES/messages.po
