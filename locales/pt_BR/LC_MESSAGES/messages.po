@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../source/contribute.rst:5
 msgid "Contribute to this guide"
-msgstr "Contribuir para este guia"
+msgstr "Contribuir para este guia!"
 
 #: ../source/contribute.rst:7
 msgid ""
