@@ -279,7 +279,7 @@ msgid ""
 "server."
 msgstr ""
 "Após a conclusão do processo, você pode encontrar a saída HTML no diretório "
-"``./build/html``. Você pode abrir o arquivo ``index.html`` para ver o guia "
+"``./build/html``. Você pode abrir o arquivo ``index.html`let's brake this para ver o guia "
 "no navegador web, mas é recomendado servir o guia usando um servidor HTTP."
 
 #: ../source/contribute.rst:152
