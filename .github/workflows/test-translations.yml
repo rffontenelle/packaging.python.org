@@ -70,7 +70,9 @@ jobs:
       uses: sphinx-doc/github-problem-matcher@master
     
     - name: Build translated docs in ${{ matrix.language }}
+      id: build
       run: nox -s build -- -q -D language=${{ matrix.language }}
 
     - name: Lint translation file
+      if: contains(fromJSON('["success", "failure"]'), steps.build.outcome)
       run: sphinx-lint locales/${{ matrix.language }}/LC_MESSAGES/messages.po
